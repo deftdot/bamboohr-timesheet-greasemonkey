@@ -44,7 +44,7 @@ const DEFAULT_TEMPLATES = {
     container_fill.append(btn_fill);
 
     btn_fill.type = 'button';
-    btn_fill.classList.value = BUTTON_CLASSLIST;     
+    btn_fill.classList.value = 'fab-Button fab-Button--small fab-Button--width100';     
     // btn_fill.classList.value = 'btn btnLarge btnAction TimesheetSummary__clockButton';
     btn_fill.innerText = `Fill Day: ${template}`;
 
