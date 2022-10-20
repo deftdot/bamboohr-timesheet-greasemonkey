@@ -65,7 +65,7 @@ const BUTTON_CLASSLIST = 'fab-Button fab-Button--small fab-Button--width100';
       let date = new Date(day);
 
       /* Skip weekend */
-      if ([0, 6].includes(date.getDay())) {
+      if ([0, 5].includes(date.getDay())) {
         continue;
       }
 
