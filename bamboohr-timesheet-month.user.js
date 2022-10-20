@@ -9,7 +9,7 @@
 // @grant        GM.setValue
 // @homepageURL  https://github.com/skgsergio/bamboohr-timesheet-greasemonkey/
 // @supportURL   https://github.com/skgsergio/bamboohr-timesheet-greasemonkey/issues
-// @updateURL    https://raw.githubusercontent.com/ribugent/bamboohr-timesheet-greasemonkey/master/bamboohr-timesheet-month.user.js
+// @updateURL    https://raw.githubusercontent.com/deftdot/bamboohr-timesheet-greasemonkey/master/bamboohr-timesheet-month.user.js
 // ==/UserScript==
 
 'use strict';
@@ -20,7 +20,7 @@
    Load BambooHR for the first time with the script and then open this script Storage preferences and edit there.
  */
 const DEFAULT_TEMPLATES = {
-  'default': [{ start: '8:15', end: '13:00' }, { start: '13:20', end: '16:35' }]
+  'default': [{ start: '8:00', end: '17:30' }]
 };
 
 const DEFAULT_ENTROPY_MINUTES = 10;
