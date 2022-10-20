@@ -20,8 +20,8 @@
    Load BambooHR for the first time with the script and then open this script Storage preferences and edit there.
  */
 const DEFAULT_TEMPLATES = {
-  'default': [{ start: '8:00', end: '17:30' }],
-  'Fri': [{ start: '8:00', end: '13:00' }]
+  'Full-Day': [{ start: '8:00', end: '17:30' }],
+  'Half-Day': [{ start: '8:00', end: '13:00' }]
 };
 
 (async function() {
