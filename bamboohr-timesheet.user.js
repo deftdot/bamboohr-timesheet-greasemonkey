@@ -7,17 +7,15 @@
 // @match        https://*.bamboohr.com/employees/timesheet/?id=*
 // @grant        GM.getValue
 // @grant        GM.setValue
-// @homepageURL  https://github.com/deftdot/bamboohr-timesheet-greasemonkey/
-// @supportURL   https://github.com/deftdot/bamboohr-timesheet-greasemonkey/issues
+// @homepageURL  https://github.com/skgsergio/bamboohr-timesheet-greasemonkey/
+// @supportURL   https://github.com/skgsergio/bamboohr-timesheet-greasemonkey/issues
 // @updateURL    https://raw.githubusercontent.com/deftdot/bamboohr-timesheet-greasemonkey/master/bamboohr-timesheet.user.js
-// @downloadURL  https://raw.githubusercontent.com/deftdot/bamboohr-timesheet-greasemonkey/master/bamboohr-timesheet.user.js
 // ==/UserScript==
 
 'use strict';
 
 /*
    Don't touch this, won't persist across updates.
-
    Load BambooHR for the first time with the script and then open this script Storage preferences and edit there.
  */
 const DEFAULT_TEMPLATES = {
@@ -37,18 +35,15 @@ const DEFAULT_TEMPLATES = {
     let span = document.createElement('span');
     document.querySelector('.TimesheetSummary').prepend(span);
 
-    let container_fill = document.createElement('div');
-    container_fill.classList.value = CONTAINER_CLASSLIST;
+    let btn = document.createElement('button');
+    span.append(btn);
 
-    let btn_fill = document.createElement('button');
-    container_fill.append(btn_fill);
+    btn.type = 'button';
+    btn.classList.value = 'btn btnLarge btnAction TimesheetSummary__clockButton';
+    btn.innerText = `Fill Day: ${template}`;
+    btn.dataset.template = template;
 
-    btn_fill.type = 'button';
-    btn_fill.classList.value = 'fab-Button fab-Button--small fab-Button--width100';     
-    // btn_fill.classList.value = 'btn btnLarge btnAction TimesheetSummary__clockButton';
-    btn_fill.innerText = `Fill Day: ${template}`;
-
-    btn_fill.onclick = function () {
+    btn.onclick = function () {
       let now = new Date();
       // Do JS have propper date formatting? :facepalm:
       let date = prompt("Please enter the date", `${now.getFullYear()}-${('0' + (now.getMonth() + 1)).slice(-2)}-${('0' + now.getDate()).slice(-2)}`);
