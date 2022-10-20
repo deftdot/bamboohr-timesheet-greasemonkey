@@ -37,15 +37,18 @@ const DEFAULT_TEMPLATES = {
     let span = document.createElement('span');
     document.querySelector('.TimesheetSummary').prepend(span);
 
-    let btn = document.createElement('button');
-    span.append(btn);
+    let container_fill = document.createElement('div');
+    container_fill.classList.value = CONTAINER_CLASSLIST;
 
-    btn.type = 'button';
-    btn.classList.value = 'btn btnLarge btnAction TimesheetSummary__clockButton';
-    btn.innerText = `Fill Day: ${template}`;
-    btn.dataset.template = template;
+    let btn_fill = document.createElement('button');
+    container_fill.append(btn_fill);
 
-    btn.onclick = function () {
+    btn_fill.type = 'button';
+    btn_fill.classList.value = BUTTON_CLASSLIST;     
+    // btn_fill.classList.value = 'btn btnLarge btnAction TimesheetSummary__clockButton';
+    btn_fill.innerText = `Fill Day: ${template}`;
+
+    btn_fill.onclick = function () {
       let now = new Date();
       // Do JS have propper date formatting? :facepalm:
       let date = prompt("Please enter the date", `${now.getFullYear()}-${('0' + (now.getMonth() + 1)).slice(-2)}-${('0' + now.getDate()).slice(-2)}`);
