@@ -7,9 +7,10 @@
 // @match        https://*.bamboohr.com/employees/timesheet/?id=*
 // @grant        GM.getValue
 // @grant        GM.setValue
-// @homepageURL  https://github.com/skgsergio/bamboohr-timesheet-greasemonkey/
-// @supportURL   https://github.com/skgsergio/bamboohr-timesheet-greasemonkey/issues
+// @homepageURL  https://github.com/deftdot/bamboohr-timesheet-greasemonkey/
+// @supportURL   https://github.com/deftdot/bamboohr-timesheet-greasemonkey/issues
 // @updateURL    https://raw.githubusercontent.com/deftdot/bamboohr-timesheet-greasemonkey/master/bamboohr-timesheet.user.js
+// @downloadURL  https://raw.githubusercontent.com/deftdot/bamboohr-timesheet-greasemonkey/master/bamboohr-timesheet.user.js
 // ==/UserScript==
 
 'use strict';
